@@ -24,8 +24,9 @@ export interface ScheduleItem {
 export interface Translation {
   nav: {
     departments: string
-    survey: string
-    staff: string
+    everyday: string
+    gallery: string
+    parents: string
     contact: string
     apply: string
   }
