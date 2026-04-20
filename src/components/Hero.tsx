@@ -63,7 +63,7 @@ export default function Hero({ t }: Props) {
 
             <div className="flex items-center gap-2">
               <MapPin size={15} className="text-[#1f2f27]/40" />
-              <span>Enebakkveien 22 · Åkebergveien 23</span>
+              <span>Enebakkveien 20</span>
             </div>
 
             <div className="flex items-center gap-2">
