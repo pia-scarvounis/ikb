@@ -13,6 +13,16 @@ export interface HighlightItem {
 export interface CardItem {
   title: string
   text: string
+  details?: string[]
+  bullets?: string[]
+  sections?: {
+    heading: string
+    items: string[]
+  }[]
+  links?: {
+    label: string
+    url: string
+  }[]
 }
 
 export interface ScheduleItem {
@@ -99,8 +109,12 @@ export interface Translation {
   survey: {
     tag: string
     title: string
-    responses: string
-    avg: string
+    lead: string
+    responsesLabel: string
+    outOf: string
+    nationalAverage: string
+    showMore: string
+    showLess: string
     source: string
     categories: string[]
   }
@@ -117,6 +131,8 @@ export interface Translation {
     tag: string
     title: string
     lead: string
+    readMore: string
+    close: string
     cards: CardItem[]
   }
 

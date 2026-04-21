@@ -138,18 +138,22 @@ const no: Translation = {
   },
 
   survey: {
-    tag: 'Nasjonal foreldreundersøkelse',
-    title: 'Foreldrene er fornøyde',
-    responses: 'svar',
-    avg: 'Snitt',
-    source: 'Kilde: Utdanningsdirektoratets foreldreundersøkelse',
+    tag: 'Foreldreundersøkelse',
+    title: 'Foreldre er fornøyde',
+    lead: 'Resultater fra foreldreundersøkelsen for våre barnehager.',
+    responsesLabel: 'Svarprosent',
+    outOf: 'av 5,0',
+    nationalAverage: 'Nasjonalt gjennomsnitt',
+    showMore: 'Se mer',
+    showLess: 'Se mindre',
+    source: 'Kilde',
     categories: [
-      'Barnet trives',
-      'Ansatte er engasjerte',
-      'Lek og læring',
-      'Informasjon og kommunikasjon',
-      'Medvirkning',
-    ],
+      'Tilfredshet',
+      'Barnets utvikling',
+      'Barnets trivsel',
+      'Informasjon',
+      'Ute- og innemiljø'
+    ]
   },
 
   staff: {
@@ -160,38 +164,168 @@ const no: Translation = {
     p3: 'Studieturer og felles turer brukes også som inspirasjon og læring. For oss handler det ikke bare om personalets utvikling, men også om å få innblikk i hvordan barn lever, lærer og blir møtt i andre land og kulturer.',
     note: 'Vi ønsker å være et personale som kombinerer faglighet, varme og nysgjerrighet i møte med barna hver eneste dag.',
   },
-
   parents: {
     tag: 'For foreldre',
-    title: 'Samarbeid og tilvenning',
+    title: 'Informasjon, samarbeid og tilvenning',
     lead:
-      'Barnehagen skal i samarbeid med foreldrene legge til rette for at barna kan få en trygg og god start.',
+      'I tett samarbeid med foreldrene legger vi til rette for en trygg, god og positiv start for hvert barn.',
+    readMore: 'Les mer',
+    close: 'Lukk',
     cards: [
       {
         title: 'Åpen dag',
-        text: 'Informasjonsmøte med nye foreldre og mulighet til å besøke barnehagen før oppstart.',
+        text: 'Kom på åpen dag før oppstart og bli kjent med hverdagen i barnehagen.',
+        bullets: [
+          'Se lokalene og få et inntrykk av hvordan dagene er bygget opp',
+          'Møt ansatte og bli bedre kjent med barnehagen',
+          'Still spørsmål om rutiner, tilvenning og praktiske forhold'
+        ]
       },
       {
-        title: 'Oppstartssamtale',
-        text: 'Alle nye barn får en oppstartssamtale kort tid etter at de har begynt.',
+        title: 'Oppstartssamtale og foreldresamtaler',
+        text: 'Vi legger vekt på tett og åpen dialog med familiene helt fra starten.',
+        bullets: [
+          'Alle nye barn får en oppstartssamtale kort tid etter at de har begynt',
+          'Pedagogisk leder setter av tid til å bli kjent med barnet og familien',
+          'Foreldre kan dele informasjon om barnets behov og rutiner',
+          'Vi tilbyr to foreldresamtaler i løpet av barnehageåret',
+          'Ved behov kan det avtales flere samtaler underveis'
+        ]
       },
       {
         title: 'Tilvenning',
-        text: 'Gode faste rutiner, høy voksentetthet, små grupper og tilstedeværelse. Trygghetssirkelen',
+        text: 'Tilvenningen tilpasses hvert enkelt barn og hver familie.',
+        bullets: [
+          'Vi vet at barn reagerer ulikt på oppstart, og derfor tilpasses tilvenningen individuelt',
+          'Vi legger vekt på trygghet, nærhet, forutsigbarhet og god tid i starten',
+          'Arbeidet vårt bygger blant annet på trygghetssirkelen',
+          'Målet er at både barn og foreldre skal føle seg trygge, sett og godt ivaretatt'
+        ]
       },
       {
-        title: 'Årsplaner',
-        text: 'Les om vår pedagogiske tilnærming i årsplan for Åkeberg og Enebakkveien.',
+        title: 'Årsplaner og pedagogisk arbeid',
+        text: 'Les mer om vår pedagogiske tilnærming i årsplanene våre.',
+        bullets: [
+          'Arbeidet vårt er forankret i rammeplanen for barnehagen og barnehageloven',
+          'Årsplanene gir innsikt i verdier, mål, innhold og aktiviteter gjennom året',
+          'De beskriver også tradisjoner, fagområder og hvordan vi jobber med barns utvikling i hverdagen'
+        ],
+        links: [
+          {
+            label: 'Årsplan Åkeberg',
+            url: '/pdfs/arsplan-akeberg.pdf'
+          },
+          {
+            label: 'Årsplan Enebakkveien',
+            url: '/pdfs/arsplan-enebakkveien.pdf'
+          }
+        ]
       },
       {
         title: 'MyKid-appen',
-        text: 'Følg barnet ditt gjennom dagen via MyKid-appen. Her legger vi ut dagsreferat og bilder',
+        text: 'Følg barnets hverdag gjennom MyKid-appen.',
+        bullets: [
+          'Dagsreferater fra dagen',
+          'Bilder fra aktiviteter',
+          'Viktig og praktisk informasjon',
+          'Registrering av søvn',
+          'Registrering av aktiviteter'
+        ],
+        details: [
+          'MyKid fungerer som et viktig bindeledd mellom barnehagen og hjemmet.',
+          'Appen gir foreldre innblikk i barnets hverdag og gjør kommunikasjonen enkel og tilgjengelig.'
+        ]
       },
       {
         title: 'Pris og betaling',
-        text: 'Kostpenger 250 kr/mnd. Full prisoversikt hos Oslo kommune.',
+        text: 'Samme foreldrebetaling som i kommunale barnehager.',
+        bullets: [
+          'Kostpenger: 250 kr per måned',
+          'Full oversikt over priser finnes hos Oslo kommune'
+        ],
+        details: [
+          'Vi følger de samme satsene og reglene som kommunale barnehager.',
+          'For oppdatert informasjon om foreldrebetaling viser vi til Oslo kommune.'
+        ],
+        links: [
+          {
+            label: 'Se priser hos Oslo kommune',
+            url: 'https://www.oslo.kommune.no/barnehage/pris-og-betaling/'
+          }
+        ]
       },
-    ],
+      {
+        title: 'Klær og utstyr',
+        text: 'Barna får sekker og utedresser av barnehagen.',
+        details: [
+          'Dette utstyret gjenbrukes og går videre når det blir for smått.',
+          'Alt annet av klær og utstyr må merkes godt med barnets navn.'
+        ],
+        sections: [
+          {
+            heading: 'Ute (høst/vår)',
+            items: [
+              'Regntøy med strikk under støvlene',
+              'Regnvotter og vanlige votter',
+              'Lue (gjerne to)',
+              'Ull- eller fleecedress',
+              'Tynn utedress',
+              'Støvler og sko'
+            ]
+          },
+          {
+            heading: 'Vinter',
+            items: [
+              'Vinterdress med strikk under skoene',
+              'Regnvotter og ekstra votter',
+              'Varm lue, gjerne med hals',
+              'Vintersko og cherrox'
+            ]
+          },
+          {
+            heading: 'Inne',
+            items: [
+              'Body eller t-skjorte',
+              'Genser',
+              'Bukse',
+              'Sokker og strømpebukse',
+              'Bleier og våtservietter ved behov',
+              'Ekstra skift'
+            ]
+          },
+          {
+            heading: 'Soving og annet',
+            items: [
+              'Vogn med vognpose, regntrekk og myggnetting',
+              'Smokk eller koseklut ved behov',
+              'Soveklær som tynn lue, ullvotter, ullsokker og fleece-/ulldress',
+              'Solkrem eller kuldekrem etter sesong',
+              'Solhatt, håndkle, vannflaske og kopp til de minste'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Sykdom',
+        text: 'Barnets allmenntilstand avgjør om barnet bør være hjemme.',
+        bullets: [
+          'Barnet må være i form til å delta i vanlige aktiviteter',
+          'Barnet bør være feberfritt',
+          'Ved oppkast eller diaré skal barnet være hjemme og i 48 timer etter symptomfrihet'
+        ],
+        details: [
+          'Barn i barnehage er mer utsatt for infeksjoner, og det er vanlig at sykdommer som forkjølelse, ørebetennelse og mageinfeksjoner forekommer oftere.',
+          'Som hovedregel er det barnets allmenntilstand som avgjør om det bør være hjemme.',
+          'Ved spørsmål om sykdom og tilbakevending anbefaler vi å følge rådene fra Folkehelseinstituttet.'
+        ],
+        links: [
+          {
+            label: 'Les FHIs råd',
+            url: 'https://www.fhi.no/sm/barnehage/nar-bor-barnet-vare-hjemme-fra-barne/'
+          }
+        ]
+      }
+    ]
   },
 
   contact: {

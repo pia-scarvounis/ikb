@@ -52,6 +52,18 @@ const surveyData: KindergartenSurvey[] = [
   },
 ]
 
+function translateCategoryLabel(label: string, t: Translation) {
+  const map: Record<string, string> = {
+    Tilfredshet: t.survey.categories[0],
+    'Barnets utvikling': t.survey.categories[1],
+    'Barnets trivsel': t.survey.categories[2],
+    Informasjon: t.survey.categories[3],
+    'Ute- og innemiljø': t.survey.categories[4],
+  }
+
+  return map[label] ?? label
+}
+
 function SurveyCard({
   kindergarten,
   t,
@@ -66,32 +78,36 @@ function SurveyCard({
     : kindergarten.categories.slice(0, 3)
 
   return (
-    <article className="rounded-[28px] border border-[#e6dccb] bg-white/75 backdrop-blur-sm p-6 sm:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
-      <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between mb-8">
-        <div className="max-w-xl">
-          <h3 className="text-[clamp(1.75rem,3vw,2.4rem)] leading-[1.08] font-semibold text-[#1f2a24]">
+    <article className="rounded-[24px] border border-[#e6dccb] bg-white/75 p-5 shadow-[0_8px_24px_rgba(0,0,0,0.04)] backdrop-blur-sm sm:p-6">
+      <div className="mb-6 flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+        <div className="max-w-[420px]">
+          <h3 className="text-[clamp(1.5rem,2.6vw,2.05rem)] font-semibold leading-[1.08] text-[#1f2a24]">
             {kindergarten.name}
           </h3>
-          <p className="text-[15px] text-[#747a74] mt-4">
-            Svarprosent: {kindergarten.responseRate}
+
+          <p className="mt-3 text-[14px] text-[#747a74] sm:text-[15px]">
+            {t.survey.responsesLabel}: {kindergarten.responseRate}
           </p>
         </div>
 
         <div className="shrink-0 md:text-right">
-          <div className="text-[4rem] sm:text-[4.6rem] leading-none font-serif text-[#1f2a24]">
+          <div className="font-serif text-[3.2rem] leading-none text-[#1f2a24] sm:text-[3.8rem]">
             {kindergarten.totalScore.toFixed(1)}
           </div>
-          <div className="text-[15px] text-[#7b817b] mt-1">av 5,0</div>
 
-          <div className="flex gap-1 mt-4 md:justify-end">
+          <div className="mt-1 text-[14px] text-[#7b817b]">
+            {t.survey.outOf}
+          </div>
+
+          <div className="mt-3 flex gap-1 md:justify-end">
             {[1, 2, 3, 4, 5].map((i) => (
               <Star
                 key={i}
-                size={18}
+                size={17}
                 strokeWidth={1.7}
                 className={
                   i <= Math.round(kindergarten.totalScore)
-                    ? 'text-[#d4a338] fill-[#d4a338]'
+                    ? 'fill-[#d4a338] text-[#d4a338]'
                     : 'text-[#e5ddd1]'
                 }
               />
@@ -100,31 +116,34 @@ function SurveyCard({
         </div>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-3">
         {visibleCategories.map((item) => (
           <div
             key={item.label}
-            className="rounded-[22px] border border-[#eadfce] bg-[#fbf8f3] p-5"
+            className="rounded-[20px] border border-[#eadfce] bg-[#fbf8f3] p-4 sm:p-5"
           >
-            <div className="flex items-start justify-between gap-4 mb-4">
+            <div className="mb-3 flex items-start justify-between gap-4">
               <div>
-                <h4 className="text-[15px] sm:text-[16px] font-semibold text-[#1f2a24]">
-                  {item.label}
+                <h4 className="text-[15px] font-semibold text-[#1f2a24] sm:text-[16px]">
+                  {translateCategoryLabel(item.label, t)}
                 </h4>
-                <p className="text-[13px] sm:text-[14px] text-[#7a807a] mt-1">
-                  Nasjonalt gjennomsnitt: {item.national.toFixed(1)} / 5,0
+
+                <p className="mt-1 text-[13px] text-[#7a807a] sm:text-[14px]">
+                  {t.survey.nationalAverage}: {item.national.toFixed(1)} / 5,0
                 </p>
               </div>
 
-              <div className="text-right shrink-0 leading-tight">
-                <div className="text-[1.1rem] sm:text-[1.2rem] font-semibold text-[#1f2a24]">
+              <div className="shrink-0 text-right leading-tight">
+                <div className="text-[1.05rem] font-semibold text-[#1f2a24] sm:text-[1.15rem]">
                   {item.score.toFixed(1)}
                 </div>
-                <div className="text-[13px] text-[#7a807a] mt-1">/ 5,0</div>
+                <div className="mt-1 text-[12px] text-[#7a807a] sm:text-[13px]">
+                  / 5,0
+                </div>
               </div>
             </div>
 
-            <div className="h-2.5 rounded-full bg-[#e7dcc9] overflow-hidden">
+            <div className="h-2 rounded-full overflow-hidden bg-[#e7dcc9]">
               <div
                 className="h-full rounded-full bg-[#d29b2f] transition-all duration-500"
                 style={{ width: `${(item.score / 5) * 100}%` }}
@@ -138,19 +157,19 @@ function SurveyCard({
         <button
           type="button"
           onClick={() => setExpanded(!expanded)}
-          className="mt-5 inline-flex items-center gap-2 text-[14px] font-medium text-[#6f755f] hover:text-[#1f2a24] transition-colors"
+          className="mt-4 inline-flex items-center gap-2 text-[14px] font-medium text-[#6f755f] transition-colors hover:text-[#1f2a24]"
         >
-          {expanded ? 'Se mindre' : 'Se mer'}
+          {expanded ? t.survey.showLess : t.survey.showMore}
           {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
         </button>
       )}
 
-      <div className="mt-6 pt-5 border-t border-[#ece2d3]">
+      <div className="mt-5 border-t border-[#ece2d3] pt-4">
         <a
           href={kindergarten.link}
           target="_blank"
           rel="noreferrer"
-          className="text-[13px] text-[#6f755f] underline underline-offset-4 hover:text-[#1f2a24] transition-colors"
+          className="text-[13px] text-[#6f755f] underline underline-offset-4 transition-colors hover:text-[#1f2a24]"
         >
           {t.survey.source} · barnehagefakta.no
         </a>
@@ -161,21 +180,21 @@ function SurveyCard({
 
 export default function Survey({ t }: Props) {
   return (
-    <section id="undersokelse" className="py-24 px-5 sm:px-8 bg-[#f7f3eb]">
-      <div className="max-w-6xl mx-auto">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#b8983a] mb-3">
+    <section id="undersokelse" className="bg-[#f7f3eb] px-5 py-20 sm:px-8 sm:py-24">
+      <div className="mx-auto max-w-6xl">
+        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#b8983a]">
           {t.survey.tag}
         </p>
 
-        <h2 className="font-serif text-[clamp(1.9rem,3.5vw,2.8rem)] font-normal text-[#1f2a24] mb-4 leading-tight">
+        <h2 className="mb-4 font-serif text-[clamp(1.9rem,3.5vw,2.6rem)] font-normal leading-tight text-[#1f2a24]">
           {t.survey.title}
         </h2>
 
-        <p className="max-w-2xl text-[15px] leading-7 text-[#5f655f] mb-12">
-          Resultater fra foreldreundersøkelsen for våre barnehager.
+        <p className="mb-10 max-w-2xl text-[14px] leading-7 text-[#5f655f] sm:mb-12 sm:text-[15px]">
+          {t.survey.lead}
         </p>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-2 xl:gap-6">
           {surveyData.map((kindergarten) => (
             <SurveyCard
               key={kindergarten.id}

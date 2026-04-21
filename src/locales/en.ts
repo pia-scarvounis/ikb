@@ -136,18 +136,22 @@ const en: Translation = {
   },
 
   survey: {
-    tag: 'National parent survey',
+    tag: 'Parent survey',
     title: 'Parents are satisfied',
-    responses: 'responses',
-    avg: 'Average',
-    source: 'Source: Norwegian Directorate for Education parent survey',
+    lead: 'Results from the parent survey for our kindergartens.',
+    responsesLabel: 'Response rate',
+    outOf: 'out of 5.0',
+    nationalAverage: 'National average',
+    showMore: 'Show more',
+    showLess: 'Show less',
+    source: 'Source',
     categories: [
-      'The child thrives',
-      'Staff are engaged',
-      'Play and learning',
-      'Information and communication',
-      'Participation',
-    ],
+      'Satisfaction',
+      'Child development',
+      'Child well-being',
+      'Information',
+      'Outdoor and indoor environment'
+    ]
   },
 
   staff: {
@@ -161,37 +165,167 @@ const en: Translation = {
 
   parents: {
     tag: 'For parents',
-    title: 'Collaboration and settling in',
+    title: 'Information, collaboration and settling in',
     lead:
-      'The kindergarten, in collaboration with parents, should ensure that children get a safe and good start.',
+      'In close collaboration with parents, we aim to provide a safe, supportive and positive start for every child.',
+    readMore: 'Read more',
+    close: 'Close',
     cards: [
       {
         title: 'Open day',
-        text: 'Information meeting with new parents and the opportunity to visit the kindergarten before start.',
+        text: 'Join our open day before your child starts and get to know everyday life in the kindergarten.',
+        bullets: [
+          'Explore the facilities and get a sense of how the days are structured',
+          'Meet our staff and become familiar with the kindergarten',
+          'Ask questions about routines, settling in and practical matters'
+        ]
       },
       {
-        title: 'Start-up conversation',
-        text: 'All new children receive a start-up conversation shortly after they begin.',
+        title: 'Start-up meeting and parent meetings',
+        text: 'We prioritize close and open communication with families from the very beginning.',
+        bullets: [
+          'All new children are offered a start-up meeting shortly after they begin',
+          'The pedagogical leader sets aside time to get to know the child and family',
+          'Parents can share information about the child’s needs and routines',
+          'We offer two parent meetings during the kindergarten year',
+          'Additional meetings can be arranged if needed'
+        ]
       },
       {
         title: 'Settling in',
-        text: 'Good routines, high staff density, small groups and presence. Circle of Security',
+        text: 'The settling-in period is adapted to each individual child and family.',
+        bullets: [
+          'We know children respond differently to starting kindergarten, so the process is tailored individually',
+          'We emphasize safety, closeness, predictability and giving enough time in the beginning',
+          'Our work is based on the Circle of Security approach',
+          'Our goal is for both children and parents to feel safe, seen and well cared for'
+        ]
       },
       {
-        title: 'Annual plans',
-        text: 'Read about our pedagogical approach in the annual plans for Åkeberg and Enebakkveien.',
+        title: 'Annual plans and pedagogy',
+        text: 'Learn more about our pedagogical approach through our annual plans.',
+        bullets: [
+          'Our work is based on the Norwegian Framework Plan for Kindergartens and the Kindergarten Act',
+          'The annual plans provide insight into values, goals, content and activities throughout the year',
+          'They also describe traditions, learning areas and how we support children’s development in everyday situations'
+        ],
+        links: [
+          {
+            label: 'Annual plan Åkeberg',
+            url: '/pdfs/arsplan-akeberg.pdf'
+          },
+          {
+            label: 'Annual plan Enebakkveien',
+            url: '/pdfs/arsplan-enebakkveien.pdf'
+          }
+        ]
       },
       {
         title: 'MyKid app',
-        text: 'Follow your child throughout the day via the MyKid app. Here we share daily reports and photos',
+        text: 'Follow your child’s daily life through the MyKid app.',
+        bullets: [
+          'Daily reports',
+          'Photos from activities',
+          'Important and practical information',
+          'Sleep tracking',
+          'Activity tracking'
+        ],
+        details: [
+          'MyKid serves as an important link between the kindergarten and home.',
+          'The app gives parents insight into the child’s day and makes communication simple and accessible.'
+        ]
       },
       {
-        title: 'Pricing and payment',
-        text: 'Food fee 250 NOK/month. Full price overview at Oslo municipality.',
+        title: 'Fees and payment',
+        text: 'Parent fees are the same as in municipal kindergartens.',
+        bullets: [
+          'Food fee: NOK 250 per month',
+          'Full overview of prices is available from Oslo Municipality'
+        ],
+        details: [
+          'We follow the same regulations and pricing as public kindergartens.',
+          'For updated information about fees, please refer to Oslo Municipality.'
+        ],
+        links: [
+          {
+            label: 'See prices from Oslo Municipality',
+            url: 'https://www.oslo.kommune.no/barnehage/pris-og-betaling/'
+          }
+        ]
       },
-    ],
+      {
+        title: 'Clothing and equipment',
+        text: 'Children are provided with backpacks and outdoor suits by the kindergarten.',
+        details: [
+          'This equipment is reused and passed on when children outgrow it.',
+          'All personal clothing and equipment should be clearly labeled with the child’s name.'
+        ],
+        sections: [
+          {
+            heading: 'Outdoor (spring/autumn)',
+            items: [
+              'Rainwear with straps under boots',
+              'Rain mittens and regular mittens',
+              'Hat (preferably two)',
+              'Wool or fleece suit',
+              'Light outdoor suit',
+              'Boots and shoes'
+            ]
+          },
+          {
+            heading: 'Winter',
+            items: [
+              'Winter suit with straps under shoes',
+              'Rain mittens and extra mittens',
+              'Warm hat, preferably with a neck cover',
+              'Winter boots and insulated rubber boots'
+            ]
+          },
+          {
+            heading: 'Indoor',
+            items: [
+              'Body or t-shirt',
+              'Sweater',
+              'Pants',
+              'Socks and tights',
+              'Diapers and wet wipes if needed',
+              'Extra clothing'
+            ]
+          },
+          {
+            heading: 'Sleep and other',
+            items: [
+              'Stroller with sleeping bag, rain cover and mosquito net',
+              'Pacifier or comfort item if needed',
+              'Sleepwear such as a thin hat, wool mittens, wool socks and fleece/wool suit',
+              'Sunscreen or cold cream depending on the season',
+              'Sun hat, towel, water bottle and cup for younger children'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Illness',
+        text: 'The child’s general condition determines whether they should stay home.',
+        bullets: [
+          'The child should be well enough to participate in normal activities',
+          'The child should be fever-free',
+          'In case of vomiting or diarrhea, the child must stay home and for 48 hours after symptoms have stopped'
+        ],
+        details: [
+          'Children in kindergarten are more exposed to infections, and it is common for illnesses such as colds, ear infections and stomach viruses.',
+          'As a general rule, the child’s overall condition determines whether they should stay home.',
+          'For guidance on illness and returning to kindergarten, we recommend following advice from the Norwegian Institute of Public Health.'
+        ],
+        links: [
+          {
+            label: 'Read official guidelines',
+            url: 'https://www.fhi.no/sm/barnehage/nar-bor-barnet-vare-hjemme-fra-barne/'
+          }
+        ]
+      }
+    ]
   },
-
   contact: {
     tag: 'Get in touch',
     title: 'We respond quickly',
