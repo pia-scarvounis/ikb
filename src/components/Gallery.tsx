@@ -67,7 +67,6 @@ export default function Gallery({ t }: Props) {
       inline: 'center',
       block: 'nearest',
     })
-    setMobileIndex(index)
   }
 
   useEffect(() => {
@@ -94,23 +93,25 @@ export default function Gallery({ t }: Props) {
       setMobileIndex(closestIndex)
     }
 
+    handleScroll()
+
     container.addEventListener('scroll', handleScroll, { passive: true })
     return () => container.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <section id="galleri" className="py-24 px-5 sm:px-8 bg-[#fcfbf8]">
-      <div className="max-w-6xl mx-auto">
+    <section id="galleri" className="bg-[#fcfbf8] px-5 py-24 sm:px-8">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-10 sm:mb-12">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9a7a25] mb-3">
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#9a7a25]">
             {t.gallery.tag}
           </p>
 
-          <h2 className="font-serif text-[clamp(2rem,3.8vw,3rem)] font-normal text-[#1f2f27] mb-4 leading-tight">
+          <h2 className="mb-4 font-serif text-[clamp(2rem,3.8vw,3rem)] font-normal leading-tight text-[#1f2f27]">
             {t.gallery.title}
           </h2>
 
-          <p className="text-[#5f675f] text-[16px] sm:text-[17px] max-w-2xl leading-[1.8] font-light">
+          <p className="max-w-2xl text-[16px] font-light leading-[1.8] text-[#5f675f] sm:text-[17px]">
             {t.gallery.lead}
           </p>
         </div>
@@ -119,24 +120,22 @@ export default function Gallery({ t }: Props) {
         <div className="md:hidden">
           <div
             ref={mobileScrollRef}
-            className="-mx-5 px-5 overflow-x-auto snap-x snap-mandatory no-scrollbar"
+            className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 no-scrollbar"
           >
-            <div className="flex gap-4 w-max">
-              {images.map((image) => (
-                <div
-                  key={image.alt}
-                  className="w-[84vw] snap-center overflow-hidden rounded-[26px] border border-[#e7dccb] bg-white shadow-[0_10px_28px_rgba(0,0,0,0.05)]"
-                >
-                  <div className="aspect-[4/5] overflow-hidden">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
+            {images.map((image) => (
+              <div
+                key={image.alt}
+                className="w-[84vw] shrink-0 snap-center overflow-hidden rounded-[26px] border border-[#e7dccb] bg-white shadow-[0_10px_28px_rgba(0,0,0,0.05)]"
+              >
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           <div className="mt-6 flex items-center justify-center gap-2">
