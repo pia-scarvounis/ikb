@@ -108,8 +108,10 @@ const no: Translation = {
     ],
     scheduleNote:
       'Alle tider er veiledende. Barnehagen serverer 2 varmmåltid i uken. Vi har gymsal to timer én dag i uken.',
-    showMore: 'Se hele dagsrytmen',
-    showLess: 'Skjul dagsrytmen',
+      previewTitle: 'Lurer du på hvordan en vanlig dag ser ut hos oss?',
+      previewText: 'Her kan du se dagsrytmen i barnehagen.',
+      openSchedule: 'Se dagsrytme',
+      closeSchedule: 'Lukk',
     imageAlt: 'Barn i barnehagen',
     aboutItems: [
       {

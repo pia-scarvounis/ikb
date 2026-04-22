@@ -91,11 +91,13 @@ export interface Translation {
     tag: string
     title: string
     lead: string
+    previewTitle: string
+    previewText: string
+    openSchedule: string
+    closeSchedule: string
     scheduleTitle: string
     schedule: ScheduleItem[]
     scheduleNote: string
-    showMore: string
-    showLess: string
     imageAlt: string
     aboutItems: DetailItem[]
   }

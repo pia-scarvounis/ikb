@@ -61,7 +61,37 @@ const en: Translation = {
     title: 'Daily life in the kindergarten',
     lead:
       'A small insight into what our days look like and what shapes everyday life in the kindergarten.',
+  
+    previewTitle: 'Wondering what a typical day looks like with us?',
+    previewText: 'Here you can see the daily routine in the kindergarten.',
+    openSchedule: 'View daily routine',
+    closeSchedule: 'Close',
+  
     scheduleTitle: 'Daily routine',
+    scheduleNote:
+      'All times are approximate. The kindergarten serves 2 hot meals per week. We have gym sessions for two hours one day per week.',
+  
+    imageAlt: 'Children in the kindergarten',
+  
+    aboutItems: [
+      {
+        title: 'Language and inclusion',
+        text: 'We actively work with language from the age of one through play, concepts and reading. We use the Være Sammen programme for inclusion and early intervention.',
+      },
+      {
+        title: 'Food and meals',
+        text: 'We prepare one meal per day served at 11 – hot meals are offered 2 times per week. Packed lunch is eaten at 14',
+      },
+      {
+        title: 'Outdoor life and excursions',
+        text: 'We are outside every day in all kinds of weather. All departments have a fixed excursion day each week. The youngest children sleep outdoors in prams with supervision at all times.',
+      },
+      {
+        title: 'Traditions and ending',
+        text: 'Age-based groups. The school group is active throughout the final kindergarten year and ends with a trip to the zoo and an overnight stay in Kardemomme Town.',
+      },
+    ],
+  
     schedule: [
       {
         time: '07:30',
@@ -104,31 +134,7 @@ const en: Translation = {
         text: '',
       },
     ],
-    scheduleNote:
-      'All times are approximate. The kindergarten serves 2 hot meals per week. We have gym sessions for two hours one day per week.',
-    showMore: 'View full schedule',
-    showLess: 'Hide schedule',
-    imageAlt: 'Children in the kindergarten',
-    aboutItems: [
-      {
-        title: 'Language and inclusion',
-        text: 'We actively work with language from the age of one through play, concepts and reading. We use the Være Sammen programme for inclusion and early intervention.',
-      },
-      {
-        title: 'Food and meals',
-        text: 'We prepare one meal per day served at 11 – hot meals are offered 2 times per week. Packed lunch is eaten at 14',
-      },
-      {
-        title: 'Outdoor life and excursions',
-        text: 'We are outside every day in all kinds of weather. All departments have a fixed excursion day each week. The youngest children sleep outdoors in prams with supervision at all times.',
-      },
-      {
-        title: 'Traditions and ending',
-        text: 'Age-based groups. The school group is active throughout the final kindergarten year and ends with a trip to the zoo and an overnight stay in Kardemomme Town.',
-      },
-    ],
   },
-
   gallery: {
     tag: 'Our daily life',
     title: 'Small moments in pictures',
@@ -162,7 +168,6 @@ const en: Translation = {
     p3: 'Study trips and shared trips are also used for inspiration and learning. For us, it is not only about staff development, but also about gaining insight into how children live, learn and are cared for in other countries and cultures.',
     note: 'We aim to be a staff that combines professionalism, warmth and curiosity in meeting children every single day.',
   },
-
   parents: {
     tag: 'For parents',
     title: 'Information, collaboration and settling in',
