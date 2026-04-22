@@ -240,8 +240,9 @@ const no: Translation = {
         title: 'Pris og betaling',
         text: 'Samme foreldrebetaling som i kommunale barnehager.',
         bullets: [
+          'Barnehageplass: 1200 kr per måned',
           'Kostpenger: 250 kr per måned',
-          'Full oversikt over priser finnes hos Oslo kommune'
+          
         ],
         details: [
           'Vi følger de samme satsene og reglene som kommunale barnehager.',

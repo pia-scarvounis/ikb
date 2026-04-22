@@ -239,8 +239,9 @@ const en: Translation = {
         title: 'Fees and payment',
         text: 'Parent fees are the same as in municipal kindergartens.',
         bullets: [
+          'Kindergarten fee: NOK 1200 per month',
           'Food fee: NOK 250 per month',
-          'Full overview of prices is available from Oslo Municipality'
+          
         ],
         details: [
           'We follow the same regulations and pricing as public kindergartens.',
