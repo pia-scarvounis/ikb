@@ -2,6 +2,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Translation } from '../types'
 
+import gHero from '../assets/galleri.png'
 import g1 from '../assets/galleri1.jpg'
 import g2 from '../assets/galleri2.jpg'
 import g3 from '../assets/galleri3.jpg'
@@ -20,6 +21,7 @@ interface Props {
 }
 
 const images = [
+  { src: gHero, alt: 'Barnehage med ballonger' },
   { src: g10, alt: 'Galleri bilde 10' },
   { src: g11, alt: 'Galleri bilde 11' },
   { src: g12, alt: 'Galleri bilde 12' },
