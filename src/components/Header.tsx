@@ -22,7 +22,7 @@ export default function Header({ t, lang, toggleLang }: Props) {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-[#e8dfd1] shadow-[0_1px_0_rgba(0,0,0,0.02)]">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 h-[78px] flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 h-[84px] flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 min-w-0">
           <img
             src={logo}
@@ -40,7 +40,7 @@ export default function Header({ t, lang, toggleLang }: Props) {
           </div>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {links.map((link) => (
             <a
               key={link.href}
@@ -53,27 +53,54 @@ export default function Header({ t, lang, toggleLang }: Props) {
 
           <button
             onClick={toggleLang}
-            className="inline-flex h-11 items-center justify-center rounded-xl border border-[#ddd5c7] px-4 text-[14px] font-semibold text-[#4e5651] hover:border-[#cdbfa6] hover:text-[#1f2f27] transition-colors"
+            className="inline-flex items-center rounded-full border border-[#ddd5c7] bg-[#faf8f3] p-1 transition-colors hover:border-[#cdbfa6]"
+            aria-label="Bytt språk"
           >
-            {lang === 'no' ? 'EN' : 'NO'}
+            <span
+              className={`inline-flex h-8 min-w-[38px] items-center justify-center rounded-full px-3 text-[12px] font-semibold transition-all ${
+                lang === 'no'
+                  ? 'bg-[#1f2f27] text-white'
+                  : 'text-[#6f756f]'
+              }`}
+            >
+              NO
+            </span>
+            <span
+              className={`inline-flex h-8 min-w-[38px] items-center justify-center rounded-full px-3 text-[12px] font-semibold transition-all ${
+                lang === 'en'
+                  ? 'bg-[#1f2f27] text-white'
+                  : 'text-[#6f756f]'
+              }`}
+            >
+              EN
+            </span>
           </button>
-
-          <a
-            href="https://www.oslo.kommune.no/barnehage/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-2xl bg-[#1f4a34] px-6 text-[14px] font-semibold text-white hover:bg-[#183b29] transition-colors"
-          >
-            {t.nav.apply}
-          </a>
         </nav>
 
         <div className="flex lg:hidden items-center gap-3">
           <button
             onClick={toggleLang}
-            className="inline-flex h-10 items-center justify-center rounded-xl border border-[#ddd5c7] px-3 text-[13px] font-semibold text-[#4e5651]"
+            className="inline-flex items-center rounded-full border border-[#ddd5c7] bg-[#faf8f3] p-1"
+            aria-label="Bytt språk"
           >
-            {lang === 'no' ? 'EN' : 'NO'}
+            <span
+              className={`inline-flex h-7 min-w-[34px] items-center justify-center rounded-full px-2.5 text-[11px] font-semibold ${
+                lang === 'no'
+                  ? 'bg-[#1f2f27] text-white'
+                  : 'text-[#6f756f]'
+              }`}
+            >
+              NO
+            </span>
+            <span
+              className={`inline-flex h-7 min-w-[34px] items-center justify-center rounded-full px-2.5 text-[11px] font-semibold ${
+                lang === 'en'
+                  ? 'bg-[#1f2f27] text-white'
+                  : 'text-[#6f756f]'
+              }`}
+            >
+              EN
+            </span>
           </button>
 
           <button
@@ -99,15 +126,6 @@ export default function Header({ t, lang, toggleLang }: Props) {
                 {link.label}
               </a>
             ))}
-
-            <a
-              href="https://www.oslo.kommune.no/barnehage/"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-2xl bg-[#1f4a34] px-5 text-[14px] font-semibold text-white"
-            >
-              {t.nav.apply}
-            </a>
           </div>
         </div>
       )}
