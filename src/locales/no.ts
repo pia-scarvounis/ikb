@@ -61,14 +61,43 @@ const no: Translation = {
     title: 'Hverdagen i barnehagen',
     lead:
       'Et lite innblikk i hvordan dagene våre ser ut, og hva som preger hverdagen i barnehagen.',
+
+    previewTitle: 'Lurer du på hvordan en vanlig dag ser ut hos oss?',
+    previewText: 'Her kan du se dagsrytmen i barnehagen.',
+    openSchedule: 'Se dagsrytme',
+    closeSchedule: 'Lukk',
+
     scheduleTitle: 'Dagsrytme',
+    scheduleNote:
+      'Tidene kan variere noe fra dag til dag og mellom avdelingene.',
+
+    imageAlt: 'Barn i barnehagen i løpet av dagen',
+
+    aboutItems: [
+      {
+        title: 'Språk og inkludering',
+        text: 'Vi jobber aktivt med språk fra barna er ett år gjennom lek, begreper og lesing. Vi bruker Være Sammen-programmet for inkludering og tidlig innsats.',
+      },
+      {
+        title: 'Mat og måltider',
+        text: 'Vi lager et måltid om dagen som barna spiser kl 11 – varmmat tilbys 2 ganger i uken. Medbragt matpakke spises kl 14.',
+      },
+      {
+        title: 'Friluft og turdager',
+        text: 'Vi er ute hver dag i all slags vær. Alle avdelinger har en fast turdag i uken. De minste barna sover ute i vogn med sovevakt til stede hele tiden.',
+      },
+      {
+        title: 'Tradisjoner og avslutning',
+        text: 'Aldersinndelte klubber. Skoleklubben er aktiv hele det siste barnehageåret og avslutter med tur til Dyreparken og overnatting i Kardemomme by.',
+      },
+    ],
+
     schedule: [
       {
         time: '07:30',
         title: 'Barnehagen åpner',
         text: 'Vi starter dagen sammen med samarbeidsavdelinger. Medbrakt frokost spises, etterfulgt av frilek.',
       },
-   
       {
         time: '09:30',
         title: 'Kjernetid starter',
@@ -92,9 +121,8 @@ const no: Translation = {
       {
         time: '14:30',
         title: 'Lek og hvilestund',
-        text: 'Lek i grupper ute eller inne, hvilestund for storebarnsavdelinger med høytlesning/lydbøk.',
+        text: 'Lek i grupper ute eller inne, hvilestund for storebarnsavdelinger med høytlesning/lydbok.',
       },
-      
       {
         time: '16:45',
         title: 'Henting',
@@ -104,29 +132,6 @@ const no: Translation = {
         time: '17:00',
         title: 'Barnehagen låses',
         text: '',
-      },
-    ],
-    scheduleNote:
-      'Alle tider er veiledende. Barnehagen serverer 2 varmmåltid i uken. Vi har gymsal to timer én dag i uken.',
-    showMore: 'Se hele dagsrytmen',
-    showLess: 'Skjul dagsrytmen',
-    imageAlt: 'Barn i barnehagen',
-    aboutItems: [
-      {
-        title: 'Språk og inkludering',
-        text: 'Vi jobber aktivt med språk fra barna er ett år gjennom lek, begreper og lesing. Vi bruker Være Sammen-programmet for inkludering og tidlig innsats.',
-      },
-      {
-        title: 'Mat og måltider',
-        text: 'Vi lager et måltid om dagen som barna spiser kl 11 – varmmat tilbys 2 ganger i uken. Medbragt matpakke spises kl 14',
-      },
-      {
-        title: 'Friluft og turdager',
-        text: 'Vi er ute hver dag i all slags vær. Alle avdelinger har en fast tur-dag i uken. De minste barna sover ute i vogn med sovevakt tilstede hele tiden.',
-      },
-      {
-        title: 'Tradisjoner og avslutning',
-        text: 'Aldersinndelte klubber. Skoleklubben er aktiv hele det siste barnehageåret og avslutter med tur til Dyreparken og overnatting i Kardemomme by.',
       },
     ],
   },
@@ -164,6 +169,7 @@ const no: Translation = {
     p3: 'Studieturer og felles turer brukes også som inspirasjon og læring. For oss handler det ikke bare om personalets utvikling, men også om å få innblikk i hvordan barn lever, lærer og blir møtt i andre land og kulturer.',
     note: 'Vi ønsker å være et personale som kombinerer faglighet, varme og nysgjerrighet i møte med barna hver eneste dag.',
   },
+
   parents: {
     tag: 'For foreldre',
     title: 'Informasjon, samarbeid og tilvenning',
