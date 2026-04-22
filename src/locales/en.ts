@@ -245,7 +245,7 @@ const en: Translation = {
         ],
         details: [
           'We follow the same regulations and pricing as public kindergartens.',
-          'For updated information about fees, please refer to Oslo Municipality.'
+          'For updated information about fees, please refer to Oslo Kommune.'
         ],
         links: [
           {
