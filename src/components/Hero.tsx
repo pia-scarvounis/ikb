@@ -9,10 +9,34 @@ export default function Hero({ t }: Props) {
   return (
     <section className="relative overflow-hidden bg-[#f7f3eb] text-[#1f2f27]">
       
-      {/* subtle background shapes */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* playful decorative shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* large soft blobs in background */}
         <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-[#ebe6d8] blur-3xl opacity-70" />
         <div className="absolute top-16 right-[-60px] h-80 w-80 rounded-full bg-[#f1e3b8] blur-3xl opacity-50" />
+
+        {/* solid playful circles */}
+        {/* top-right: pink */}
+        <div className="absolute top-8 right-12 h-14 w-14 rounded-full bg-[#f2b8c6] opacity-75" />
+        {/* top-right: small lavender */}
+        <div className="absolute top-24 right-36 h-6 w-6 rounded-full bg-[#c9bfe0] opacity-80" />
+        {/* top-right: tiny yellow */}
+        <div className="absolute top-6 right-52 h-4 w-4 rounded-full bg-[#f0c84a] opacity-70" />
+
+        {/* left side: mint green */}
+        <div className="absolute top-1/3 -left-4 h-16 w-16 rounded-full bg-[#a8d8b8] opacity-65" />
+        {/* left side: small pink dot */}
+        <div className="absolute top-1/2 left-10 h-5 w-5 rounded-full bg-[#f2b8c6] opacity-60" />
+
+        {/* bottom area */}
+        {/* bottom-right: large mint */}
+        <div className="absolute -bottom-6 right-24 h-20 w-20 rounded-full bg-[#a8d8b8] opacity-55" />
+        {/* bottom-right: small lavender */}
+        <div className="absolute bottom-10 right-10 h-7 w-7 rounded-full bg-[#c9bfe0] opacity-70" />
+        {/* bottom-left: yellow */}
+        <div className="absolute bottom-4 left-1/4 h-9 w-9 rounded-full bg-[#f0c84a] opacity-55" />
+        {/* bottom-left: tiny pink */}
+        <div className="absolute bottom-16 left-1/3 h-4 w-4 rounded-full bg-[#f2b8c6] opacity-65" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-24 lg:pt-28 lg:pb-28">
